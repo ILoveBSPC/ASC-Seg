@@ -87,6 +87,5 @@ The content of this project itself is licensed under [LICENSE](LICENSE).
 
 ## 💡 Acknowledgement
 
-- [UltraLight VM-UNet](https://github.com/eltociear/UltraLight-VM-UNet)
-- [SHViT](https://github.com/ysj9909/SHViT)
+- [VM-UNet](https://github.com/JCruan519/VM-UNet)
 
