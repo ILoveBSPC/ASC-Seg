@@ -58,7 +58,7 @@ class DiceLoss(nn.Module):
 
 
 class BceDiceLoss(nn.Module):
-    def __init__(self, wb=1, wd=1):
+    def __init__(self, wb=0.5, wd=0.5):
         super().__init__()
         self.bce = BCELoss()
         self.dice = DiceLoss()
