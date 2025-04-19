@@ -27,7 +27,7 @@ Extensive experiments of ASC-Seg on 5 medical image datasets verify its superior
 ## 📻 Overview
 
 <div align="center">
-<img width="800" alt="image" src="asserts/ASC-Seg.png?raw=true">
+<img width="800" alt="image" src="asserts/network.png?raw=true">
 </div>
 
 
@@ -83,7 +83,7 @@ concrete information see test.py, please
 ## 🖼️ Visualization
 
 <div align="center">
-<img width="800" alt="image" src="asserts/Visualization.png?raw=true">
+<img width="800" alt="image" src="asserts/compara.png?raw=true">
 </div>
 
 
