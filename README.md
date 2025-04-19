@@ -4,18 +4,25 @@
 
 ## 🎈 News
 
-- [2024.11.10] Training and inference code released
+- [2025.4.18] Training and inference code released
 
-## 🚀 Introduction
+⭐ Abstract
 
-In medical image segmentation, accurately recognizing complex structures while mitigating noise interference remains a significant challenge. Existing methods often fail to address these issues, leading to suboptimal segmentation performance. To tackle this, we propose the ASC-Seg, a novel framework comprising two key components: one Adaptive Structure Encoder (ASE) and one Cross-scale Noise Suppression Decoder (CNSD). The ASE adopts a parallel Mamba approach to capture global salient regions and utilizes deformable convolutions to adaptively adjust local sampling grids, thereby improving the alignment and representation of irregular contour structures. Plus, the CNSD enhances robustness by integrating multi-scale features and employing advanced noise suppression mechanisms to effectively filter out irrelevant regions.
+Medical image segmentation plays a vital role in clinical workflows and treatment plans.
+However, it faces two challenges:
+First, the contour structures of salient objects and background details vary significantly in medical images of different modalities.
+Second, the salient and non-salient objects often exhibit misleading co-occurrence phenomena and noise interference often exists at the segmentation boundaries.
+To overcome these challenges, we propose ASC-Seg, a network designed to enhance medical image segmentation.
+ASC-Seg adopts the Adaptive Structure Encoder (ASE) to capture the global structure and context of salient objects via parallel Mamba, and uses deformable learning to adaptively locate fine-grained contour details in complex backgrounds in medical images of different modalities.
+Plus, our Cross-scale Noise Suppression Decoder (CNSD) uses noise suppression strategy and efficient attention mechanism to suppress noise introduced by non-salient regions and highlight critical salient regions, thereby enhancing the model's accuracy to distinguishing salient and non-salient objects.
+Extensive experiments of ASC-Seg on 5 medical image datasets verify its superior performance and versatility, demonstrating its potential in the field of medical image segmentation.
+
+## 🚀 The challenges
 
 <div align="center">
-    <img width="400" alt="image" src="asserts/Challenges.png?raw=true">
+    <img width="400" alt="image1" src="asserts/cha1.png?raw=true" style="display: inline-block; margin-right: 10px;">
+    <img width="400" alt="image2" src="asserts/cha2.png?raw=true" style="display: inline-block;">
 </div>
-
-
-The challenges: (a) background interference; (b) intricate edge; (c) complex lesion structure; (d) blurry background.
 
 ## 📻 Overview
 
@@ -24,7 +31,7 @@ The challenges: (a) background interference; (b) intricate edge; (c) complex les
 </div>
 
 
-Illustration of the overall architecture of ASC-Seg. (II) ASE is Adaptive Structural Encoder, (III) CNSD is Cross-Scale Noise Suppression Decoder, (IV) FAC is Feature Alignment Connector. (II.a) IPCB is Inverted Pyramid Convolution Block, (II.b) PMB is Parallel Mamba Block, (II.c) DCB is Deformable Convolution Block, (III.a) MSFA is Multi-Scale Feature Aggregation Module, (III.b) SF is Salient Focus Module, DFB is Denoising Focus Block, SA is Spatial Attention Block, CA is Channel Attention Block and PH is Prediction Head Module.
+Illustration of the overall architecture of ASC-Seg. (II) ASE is Adaptive Structural Encoder, (III) CNSD is Cross-scale Noise Suppression Decoder, (IV) FAC is Feature Alignment Connector, (II.a) IPCB is Inverted Pyramid Convolution Block, (II.b) DCB is Deformable Convolution Block, (II.c) PMB is Parallel Mamba Block, (III.a) MSFA is Multi-Scale Feature Aggregation Module, (III.b) SFM is Salient Focus Module, (III.b) DFB is Denoising Focus Block, (III.b) SAB is Spatial Attention Block, and (III.c) CAB is Channel Attention Block.
 
 
 ## 📆 TODO
